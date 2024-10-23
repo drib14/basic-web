@@ -1,0 +1,166 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #eaeaf2 30%, #ffffff 100%); /* Base gradient background */
+    background-size: 400% 400%; /* Makes the gradient larger for smooth transitions */
+    animation: gradient-animation 10s ease infinite; /* Adds animation to the gradient */
+    color: #333;
+    line-height: 1.6; /* Improved readability */
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* Slight transparency */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Softer shadow */
+}
+
+/* Optional overlay for additional texture */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('path/to/your/overlay-image.png'); /* Add a subtle overlay image */
+    opacity: 0.1; /* Adjust opacity for subtle effect */
+    pointer-events: none; /* Ensures the overlay does not interfere with interaction */
+}
+
+/* Section title styles */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #4a4a4a;
+    margin-bottom: 30px; /* Increased margin */
+    text-align: center;
+    font-size: 2.5em; /* Larger title font */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 1px; /* Spacing for title */
+}
+
+/* Profile section */
+#person-profile,
+#social-media-profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px; /* Increased bottom margin */
+}
+
+.profile-card,
+.social-media-card,
+.pet-card {
+    flex: 1 1 30%;
+    background: linear-gradient(145deg, #f9f9f9, #e6e6e6); /* Gradient background for cards */
+    border: none; /* Remove borders */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px; /* Increased padding */
+    margin: 15px; /* Increased margin */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Hover effects */
+.profile-card:hover,
+.social-media-card:hover,
+.pet-card:hover {
+    transform: translateY(-8px) rotate(1deg); /* Slight lift and rotation on hover */
+    background-color: #e0e0e0; /* Change background color on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+}
+
+.profile-card h3,
+.social-media-card h3,
+.pet-card h3 {
+    margin-bottom: 15px; /* Increased margin */
+    font-size: 1.5em; /* Larger font size for headings */
+    font-weight: 600; /* Bolder text */
+    color: #333; /* Primary text color */
+    letter-spacing: 0.5px; /* Slight spacing for headings */
+}
+
+.profile-card p,
+.social-media-card p {
+    margin: 10px 0; /* Increased margin */
+    font-size: 1em; /* Consistent font size */
+    color: #666; /* Slightly lighter color for paragraph text */
+}
+
+/* Social media card image */
+.social-media-card img {
+    width: 70px; /* Slightly larger icons */
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Circular image */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.social-media-card img:hover {
+    transform: scale(1.15); /* Scale effect on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.pet-card img {
+    max-width: 100%;
+    border-radius: 10px; /* Slightly rounded corners */
+    margin-bottom: 15px; /* Increased margin */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+}
+
+/* Button styles */
+button {
+    background-color: #4a90e2; /* Primary button color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px 24px; /* Increased padding for buttons */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transition */
+    font-weight: 600; /* Bolder button text */
+    letter-spacing: 0.5px; /* Spacing for button text */
+}
+
+button:hover {
+    background-color: #357ab7; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Pet section */
+.pet-subsection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-card,
+    .social-media-card,
+    .pet-card {
+        flex: 1 1 100%; /* Stack cards on smaller screens */
+        margin: 10px 0; /* Adjust margin for mobile */
+    }
+
+    .section-title {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
+}

@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description"
+        content="Interactive profile page showcasing personal profiles, favorite social media, and pets.">
+    <title>Person Profiles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    
-    <script src="hello.js"></script>
+    <div class="container">
+        <!-- Profile Section -->
+        <section class="profile-section" aria-label="Personal Profiles">
+            <h1 class="section-title">Personal Profile</h1>
+            <div id="person-profile"></div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="social-media-section" aria-label="Favorite Social Media Platforms">
+            <h2 class="section-title">Favorite Social Media Platforms</h2>
+            <div id="social-media-profile"></div>
+        </section>
+
+        <!-- Pet Section -->
+        <section class="pet-section" aria-label="Meet the Pets">
+            <h2 class="section-title">Meet the Pets</h2>
+            <div id="cat-profile" class="pet-subsection"></div>
+            <div id="dog-profile" class="pet-subsection"></div>
+        </section>
+    </div>
+
+    <script src="card.js"></script>
 </body>
+
 </html>

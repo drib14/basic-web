@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    /* A very light gray-blue for a fresh look */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    /* Increased width for a more spacious layout */
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 3.5em;
+    /* Larger heading size for emphasis */
+    color: #2c3e50;
+    /* Darker color for better readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Common styles for logo cards */
+.logo-card {
+    border: 1px solid #dcdcdc;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 150px;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.logo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 80px;
+    /* Optimal size for logos */
+    height: auto;
+    transition: transform 0.3s;
+    /* Added transition for scaling */
+}
+
+.logo-card:hover .logo {
+    transform: scale(1.1);
+    /* Scale logo slightly on hover for effect */
+}
+
+.logo-name {
+    margin-top: 15px;
+    /* More space between logo and name */
+    font-size: 18px;
+    /* Slightly larger font size for names */
+    text-align: center;
+    /* Center align the text */
+    font-weight: 600;
+    /* Bold weight for the text */
+    line-height: 1.5;
+    /* Better line height for readability */
+    text-transform: capitalize;
+    /* Capitalize first letter of each word */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .logo-card {
+        width: 120px;
+        /* Smaller cards for mobile */
+    }
+
+    h1 {
+        font-size: 2.5em;
+        /* Reduced font size for mobile */
+    }
+
+    .logo-name {
+        font-size: 16px;
+        /* Smaller name font on mobile */
+    }
+}

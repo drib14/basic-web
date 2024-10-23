@@ -5,3 +5,4 @@
 - Logics and Control flow
 - Functions
 - 3 types of Loop (for, for-in, for-of)
+- JSON (JavaScript Object Notation)
