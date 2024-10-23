@@ -1,4 +1,7 @@
-## Git and Git command learnings
+## Completing JS Course
 
-- Implementing new Features for our future project under development
-- Hey, fellas I am a new intern, and I added some line of code
+- JS Intro
+- Variables and Datatypes
+- Operators and Equality
+- Logics and Control flow
+- Functions
