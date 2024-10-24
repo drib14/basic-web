@@ -86,3 +86,97 @@ for (let i in person.firstNames) {
     
     console.log("------------"); // separator for each person
 }
+
+// JSON Stringify = JSON -> String
+let strPerson = JSON.stringify(person)
+console.log(strPerson)
+
+// JSON Parse = String -> JSON
+strPerson = `{"firstName": "Drib", "lastNam": "Ramirez"}`
+let parsePerson = JSON.parse(strPerson)
+console.log(parsePerson)
+
+// Array of JSON
+let character = [
+    {
+        firstName: "New",
+        lastName: "Character",
+        age: 21,
+        health: 100,
+        level: 5
+    },
+    {
+        firstName: "New",
+        lastName: "Boss",
+        age: 21,
+        health: 5000,
+        level: 100
+    }
+]
+
+console.log(character)
+console.log(character[0])
+console.log(character[0].firstName)
+console.log(character[0].lastName)
+console.log(character[0].age)
+console.log(character[0].health)
+console.log(character[0].level)
+console.log(character[1].firstName)
+console.log(character[1].lastName)
+console.log(character[1].age)
+console.log(character[1].health)
+console.log(character[1].level)
+
+// Challenge for JSON
+for(let i = 0; i < character.length; i++) {
+    console.log(character[i].firstName)
+}
+
+// JSON & for-in loop
+let mainCharacter = {
+    firstName: "Shadow",
+    lastName: "Fiend",
+    level: 20,
+    hp: 10000
+}
+for(i in mainCharacter) {
+    console.log(mainCharacter[i])
+}
+
+// Object.keys Method
+let keys = Object.keys(mainCharacter)
+console.log(keys)
+
+// Tutorial JSON for-in / Object.keys Method
+let grades = {
+    PE: 98,
+    OOPROG: 90,
+    DIGILOG: 89,
+    ACCTG: 78,
+    SOCIO: 87,
+    ITSAD: 90,
+    RIZAL: 92,
+    TWRITE: 90
+}
+
+let avg = 0
+
+for(let keys in grades) {
+    console.log(`${keys} : ${grades[keys]}`)
+    avg += grades[keys]
+}
+
+avg /= Object.keys(grades).length
+console.log(`Final Total Grade: ${avg}`)
+
+if(avg >= 95) {
+    console.log("With Highest Honors!")
+} else if(avg >= 90) {
+    console.log("With High Honors!")
+} else if(avg >= 89) {
+    console.log("With Honors!")
+} else if(avg >= 75) {
+    console.log("Passed!")
+} else {
+    console.log("FAILED!")
+}

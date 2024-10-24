@@ -6,3 +6,7 @@
 - Functions
 - 3 types of Loop (for, for-in, for-of)
 - JSON (JavaScript Object Notation)
+- JSON Object.keys
+- JSON with Arrays
+- JSON Object.keys & For-in Loop
+- Some Challenges
